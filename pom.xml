@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <packaging>pom</packaging>
+<!--    Do not create any jar from this pom, use it as a template to create poms.-->
 
     <modules>
         <module>app-domain-model</module>
@@ -12,6 +13,7 @@
         <module>task-service</module>
         <module>app-client-management</module>
     </modules>
+
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -104,6 +106,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 
     <build>
         <plugins>
