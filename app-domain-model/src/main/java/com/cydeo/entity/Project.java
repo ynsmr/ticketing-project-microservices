@@ -2,10 +2,10 @@ package com.cydeo.entity;
 
 import com.cydeo.enums.Status;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Where;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 
 

@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
+import java.io.File;
+
 
 @SpringBootApplication
 @EnableFeignClients
@@ -13,11 +15,13 @@ public class TaskServiceApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(TaskServiceApplication.class,args);
+
+        SpringApplication.run(TaskServiceApplication.class, args);
     }
 
     @Bean
-    public ModelMapper modelMapper(){
+    public ModelMapper modelMapper() {
         return new ModelMapper();
     }
+
 }

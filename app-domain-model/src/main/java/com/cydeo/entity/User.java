@@ -2,9 +2,10 @@ package com.cydeo.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Where;
-import javax.persistence.*;
+
 import com.cydeo.enums.Gender;
 
 @NoArgsConstructor
