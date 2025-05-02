@@ -26,7 +26,6 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery-service:8761/eureka/
 
-
 management:
   endpoint:
     health:
@@ -36,7 +35,6 @@ management:
       exposure:
         include: "*"
   context-path: http://localhost:${server.port}/actuator
-
 
 info:
   application:
