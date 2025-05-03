@@ -1,9 +1,4 @@
 spring:
-  sleuth:
-    sampler:
-      probability: 1
-    zipkin:
-      base-url:http://host.docker.internal:9411
   application:
     name: task-service
   profiles:
@@ -40,6 +35,16 @@ management:
       exposure:
         include: "*"
   context-path: http://localhost:${server.port}/actuator
+  tracing:
+    sampling:
+      probability: 1
+  zipkin:
+    tracing:
+      endpoint: http://host.docker.internal:9411
+      export:
+        enabled: true
+      encoding: json
+
 
 info:
   application:
