@@ -134,7 +134,7 @@ public class ProjectServiceImpl implements ProjectService {
         throw new ProjectServiceException("user couldn't find");
     }
 
-    public List<ProjectDTO>userServiceFallback(String username, Exception e){
+    public List<ProjectDTO>userServiceFallback(String userName, Exception e){
         return new ArrayList<>();
     }
 
