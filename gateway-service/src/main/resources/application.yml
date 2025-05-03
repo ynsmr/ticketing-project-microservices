@@ -49,10 +49,10 @@ management:
   context-path: http://localhost:${server.port}/actuator
   tracing:
     sampling:
-      probability: 1
+      probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://host.docker.internal:9411
+      endpoint: "http://host.docker.internal:9411"
       export:
         enabled: true
       encoding: json

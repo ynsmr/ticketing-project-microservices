@@ -119,14 +119,14 @@
                 <version>${spring-boot.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.opentelemetry</groupId>
-                <artifactId>opentelemetry-exporter-zipkin</artifactId>
-                <version>1.43.0</version>
+                <groupId>io.zipkin.reporter2</groupId>
+                <artifactId>zipkin-reporter-brave</artifactId>
+                <version>3.4.3</version>
             </dependency>
             <dependency>
                 <groupId>io.micrometer</groupId>
-                <artifactId>micrometer-tracing-bridge-otel</artifactId>
-                <version>1.4.5</version>
+                <artifactId>micrometer-tracing-bridge-brave</artifactId>
+                <version>1.4.3</version>
             </dependency>
 
             <dependency>
