@@ -19,7 +19,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class TaskServiceImpl implements TaskService {
+public class    TaskServiceImpl implements TaskService {
 
     private final TaskRepository taskRepository;
     private final MapperUtil mapperUtil;;
