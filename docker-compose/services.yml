@@ -32,6 +32,7 @@ services:
       - "9090:9090"
     networks:
       - backend
+
   projectservice:
     image: ${GROUP_ID}/project-service:${SERVICE_VERSION:-latest}
     environment:
@@ -44,6 +45,7 @@ services:
       - "9091:9091"
     networks:
       - backend
+
   taskservice:
     image: ${GROUP_ID}/task-service:${SERVICE_VERSION:-latest}
     environment:
@@ -56,12 +58,14 @@ services:
       - "9092:9092"
     networks:
       - backend
+
   discovery-service:
     image: ${GROUP_ID}/discovery-service:${SERVICE_VERSION:-latest}
     ports:
       - "8761:8761"
     networks:
       - backend
+
   gateway-service:
     image: ${GROUP_ID}/gateway-service:${SERVICE_VERSION:-latest}
     ports:
@@ -73,6 +77,15 @@ services:
       - taskservice
     networks:
       - backend
+
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - backend
+
 networks:
   backend:
     driver: bridge
