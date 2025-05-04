@@ -74,10 +74,13 @@ services:
     depends_on:
       database:
         condition: service_healthy
+      configserver:
+        condition: service_started
     ports:
       - "9092:9092"
     networks:
       - backend
+    restart: on-failure
   discovery-service:
     image: ${GROUP_ID}/discovery-service:${SERVICE_VERSION:-latest}
     ports:
