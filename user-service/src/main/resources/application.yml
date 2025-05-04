@@ -3,14 +3,12 @@ spring:
     name: user-service
   profiles:
     active: default
-
   cloud:
     openfeign:
       client:
         config:
           default:
             logger-level: "FULL"
-
   jpa:
     properties:
       hibernate:
