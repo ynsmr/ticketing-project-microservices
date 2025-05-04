@@ -10,8 +10,10 @@ spring:
           uri: https://github.com/ynsmr/ticketing-project-microservices-config.git
           default-label: main
           username: ynsmr
-          password: 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
+          password: '{cipher}7029ff23a4b0649f86e0a599783a733e2a0f93bc67d737898f4bda0270827ab7c6aee5367ca2b04a9682d0f32da3064574c5ee963e48e7e0322a1290a53983f620bfe239a8d49489ed31ba8d6f5996a400fd931b95851a891b2d15a7d330724a983ea04606d9cb117cdfde602c429d70'
       fail-fast: true
 
+encrypt:
+  key: yunus
 server:
   port: 8888
