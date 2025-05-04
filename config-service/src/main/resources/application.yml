@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ynsmr/ticketing-project-microservices-config.git
+          default-label: main
+          username: ynsmr
+          password: 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
+      fail-fast: true
+
+server:
+  port: 8888
