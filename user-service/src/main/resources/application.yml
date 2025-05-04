@@ -38,12 +38,11 @@ management:
   tracing:
     sampling:
       probability: 1.0
+    enabled: true
   zipkin:
     tracing:
-      endpoint: "http://host.docker.internal:9411"
-      export:
-        enabled: true
-      encoding: json
+      endpoint: http://host.docker.internal:9411
+
 
 info:
   application:
