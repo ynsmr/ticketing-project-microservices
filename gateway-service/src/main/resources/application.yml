@@ -26,6 +26,12 @@ spring:
             - Path=/cydeo/dev/task/**
           filters:
             - RewritePath=/cydeo/dev/task/(?<segment>.*),/$\{segment}
+        - id: openapi
+          uri: http://localhost:${server.port}
+          predicates:
+            - Path=/v3/api-docs/**
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
 
 server:
   port: 8762
@@ -54,6 +60,7 @@ management:
   zipkin:
     tracing:
       endpoint: http://zipkin:9411/api/v2/spans
+
 
 
 info:
