@@ -1,6 +1,13 @@
 spring:
   application:
     name: gateway-service
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://host.docker.internal:8080/auth/realms/master/protocol/openid-connect/certs
+
   cloud:
     gateway:
       discovery:
@@ -51,10 +58,10 @@ management:
     sampling:
       probability: 1.0
     enabled: true
+
   zipkin:
     tracing:
       endpoint: http://zipkin:9411/api/v2/spans
-
 
 info:
   application:
