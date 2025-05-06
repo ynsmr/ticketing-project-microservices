@@ -6,7 +6,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:8080/realms/master/protocol/openid-connect/certs
+          jwk-set-uri: http://keycloak:8080/realms/master/protocol/openid-connect/certs
 
   cloud:
     gateway:
@@ -70,3 +70,9 @@ info:
     version: '@project.version@'
     spring-cloud-version: '@spring-cloud.version@'
     spring-boot-version: '@project.parent.version@'
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
